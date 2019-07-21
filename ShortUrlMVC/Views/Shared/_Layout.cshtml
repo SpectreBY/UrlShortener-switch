@@ -9,8 +9,17 @@
 </head>
 <body>
     <div id="content">
-        <header><a href="@Request.Url.ToString().Replace(Request.Url.AbsolutePath, "/")">URL Shortener</a></header>
-        <p>@Html.ActionLink("Список ссылок", "UrlTable")</p>
+        <header>URL Shortener</header>
+        <div id="contentButtons">
+            @using (Html.BeginForm("UrlTable", "Home", FormMethod.Get))
+            {
+                <input type="submit" value="Список ссылок" />
+            }
+            @using (Html.BeginForm("CreateShort", "Home"))
+            {
+                <input type="submit" value="Создание короткой ссылки" />
+            }
+        </div>
         @RenderBody()
     </div>
 

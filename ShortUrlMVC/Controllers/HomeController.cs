@@ -14,10 +14,12 @@ namespace ShortUrlMVC.Controllers
     {
         UrlContext urlContext = new UrlContext();
 
-        public ActionResult Index()
+        public ActionResult CreateShort()
         {
             return View();
         }
+
+        [HttpGet]
         public ActionResult UrlTable()
         {
             return View(urlContext.ListOfUrls.ToList());
@@ -98,7 +100,7 @@ namespace ShortUrlMVC.Controllers
                 {
                     urlAdress = ShortUrlGenerator.ParseUrl(urlAdress);
                     urlObj = urlContext.ListOfUrls.Single(url => url.LongUrl.Equals(urlAdress));
-                    outputUrl = string.Format("Ваша новая ссылка:</br><a href='{0}'>{1}</a>", HttpContext.Request.UrlReferrer + urlObj.ShortUrl, HttpContext.Request.UrlReferrer + urlObj.ShortUrl);
+                    outputUrl = string.Format("Ваша новая ссылка:</br><a href='http://{0}/{1}/'>http://{2}/{3}/</a>", HttpContext.Request.Url.Authority, urlObj.ShortUrl, HttpContext.Request.Url.Authority, urlObj.ShortUrl);
                     return outputUrl;
                 }
                 catch
@@ -112,7 +114,7 @@ namespace ShortUrlMVC.Controllers
                     urlObj.NumberOfTransitions = 0;
                     urlContext.ListOfUrls.Add(urlObj);
                     urlContext.SaveChanges();
-                    outputUrl = string.Format("Ваша новая ссылка:</br><a href='{0}'>{1}</a>", HttpContext.Request.UrlReferrer + shortUrl, HttpContext.Request.UrlReferrer + shortUrl);
+                    outputUrl = string.Format("Ваша новая ссылка:</br><a href='http://{0}/{1}/'>http://{2}/{3}/</a>", HttpContext.Request.Url.Authority, urlObj.ShortUrl, HttpContext.Request.Url.Authority, urlObj.ShortUrl);
                     return outputUrl;
                 }
             }
