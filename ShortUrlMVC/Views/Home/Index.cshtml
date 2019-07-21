@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div id="urlbox">
+    <div id="inputUrl">
+        @using (Ajax.BeginForm("UrlProcessing", new AjaxOptions { UpdateTargetId = "outputUrl" }))
+        {
+            <input id="urlAdress" type="text" name="urlAdress" placeholder="Введите URL для сокращения..." />
+            <input id="urlButton" type="submit" value="Выполнить" />
+        }
+    </div>
+    <div id="outputUrl">
+
+    </div>
+</div>

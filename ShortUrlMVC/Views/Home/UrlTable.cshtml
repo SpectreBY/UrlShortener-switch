@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ShortUrlMVC.Models.ListOfUrls>
+@{
+    ViewBag.Title = "UrlTable";
+}
+
+
+<div id="TableBox">
+    <table>
+        <tr id="TableHeader">
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LongUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfAdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfTransitions)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr class="TableRow">
+                <td class="col1">
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </div>
+                </td>
+                <td class="col2">
+                    <div>
+                        @Html.DisplayFor(modelItem => item.LongUrl)
+                    </div>
+                </td>
+                <td class="col3">
+                    <div>
+                        @Request.Url.ToString().Replace(Request.Url.AbsolutePath, "/")@Html.DisplayFor(modelItem => item.ShortUrl)
+                    </div>
+                </td>
+                <td class="col4">
+                    <div>
+                        @Html.DisplayFor(modelItem => item.DateOfAdd)
+                    </div>
+                </td>
+                <td class="col5">
+                    <div>
+                        @Html.DisplayFor(modelItem => item.NumberOfTransitions)
+                    </div>
+                </td>
+                <td class="col6">
+                    @using (Html.BeginForm("Update", "Home", FormMethod.Post))
+                    {
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <input id="updateBtn" type="submit" value="" />
+                    }
+                    @using (Html.BeginForm("Delete", "Home", FormMethod.Post))
+                    {
+                        <input type="hidden" name="id" value="@item.Id">
+                        <input id="deleteBtn" type="submit" value="" />
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+ </div>

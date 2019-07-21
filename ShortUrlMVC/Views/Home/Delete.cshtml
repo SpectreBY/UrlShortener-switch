@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Delete";
+}
+
+<div id="deleteBox">
+    <h2>Удаление</h2>
+    <h3>Вы уверены, что ходите удалить эту запись ?</h3>
+    @using (Html.BeginForm("DeleteConfirm", "Home", FormMethod.Post))
+    {
+        <label>Код: @Model.Id</label><br />
+        <label>Длинная ссылка: @Model.LongUrl</label><br />
+        <label>Короткая ссылка: @Model.ShortUrl</label><br />
+        <label>Дата добавления: @Model.DateOfAdd</label><br />
+        <label>Кол-во переходов: @Model.NumberOfTransitions</label><br />
+        <input type="hidden" value="@Model.Id" name="id"/><br />
+        <input id="deleteSub" type="submit" value="Удалить" />
+        <a href="/Home/UrlTable/"><input id="backBut" type="button" value="Вернуться" /></a>
+    }
+
+</div>

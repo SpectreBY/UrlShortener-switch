@@ -1,0 +1,221 @@
+﻿body {
+    background-color: rgba(207, 207, 207, 1);
+}
+
+header {
+    margin-top: 130px;
+    text-align: center;
+    font-family: Impact;
+    font-size: 80px;
+    text-shadow: -4px -4px 0px #AAAAAA;
+}
+
+header > a {
+    text-decoration: none;
+    color: rgba(77, 77, 77, 1);
+}
+
+header > a:hover {
+    color: rgba(54, 54, 54, 1);
+}
+
+p {
+    text-align:center;
+}
+
+p > a {
+    text-decoration: none;
+    font-family: Calibri;
+    font-size: 28px;
+    color: rgba(77, 77, 77, 1);
+}
+
+p :hover {
+    color: rgba(54, 54, 54, 1);
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+}
+
+#urlbox {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#urlAdress :focus {
+    background-color: white;
+}
+
+#urlAdress, #updateId, #updateLong, #updateShort, #updateDate, #updateNum {
+    width: 60%;
+    height: 60px;
+    font-style: italic;
+    font-size: 20px;
+    border: 0.1em solid #ccc;
+    border-radius: 0.7em;
+    background-color: #efefef;
+    box-shadow: 0em 0.1em 0.5em #ccc;
+    padding-left: 15px;
+    margin-right: 25px;
+}
+
+#updateId, #updateLong, #updateShort, #updateDate, #updateNum {
+    width: 550px;
+    height: 30px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+
+#updateBox, #deleteBox {
+    font-family: Calibri;
+    width: 100%;
+    text-align: center;
+}
+
+#updateBox > form > label {
+    margin-left: -450px;
+}
+
+#urlButton, #updateSub, #deleteSub, #backBut {
+    width: 200px;
+    height: 60px;
+    font-family: Calibri;
+    font-size: 20px;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    background-color: rgba(117, 148, 209, 1);
+    box-shadow: 0em 0.1em 0.5em #ccc;
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#updateSub, #deleteSub
+{
+    margin-left: 0;
+    height: 40px;
+}
+
+#backBut {
+    margin-left: 20px;
+    height: 40px;
+}
+
+#urlButton:hover, #updateSub:hover, #deleteSub:hover, #backBut:hover {
+    background-color: rgba(90, 139, 237, 1);
+}
+
+#outputUrl {
+    margin-top: 40px;
+    font-family: Calibri;
+    font-size: 24px;
+    color: rgba(33, 33, 33, 1);
+}
+
+#outputUrl > a {
+    text-decoration: none;
+    padding-bottom: 3px;
+}
+#outputUrl > a:hover, p > a:hover {
+    text-decoration: underline;
+}
+
+table {
+    font-size: 14px;
+    margin-top: 50px;
+    font-family: Calibri;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+tr > th {
+    font-size: 18px;
+}
+
+
+.col2 > div {
+    table-layout: fixed;
+    overflow-x: scroll;
+    width: 550px;
+}
+
+.col3 > div {
+    width: 300px;
+}
+
+.col4 > div {
+    width: 150px;
+}
+
+
+td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#TableBox {
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    overflow-y: scroll;
+    height: 650px;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a2a2a2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dddada;
+}
+
+#TableHeader {
+    background-color: rgba(90, 139, 237, 1);
+    height: 50px;
+}
+
+#TableHeader > th {
+    border-spacing: 10px;
+    width: 100px;
+}
+
+.TableRow > .col1, .col2, .col3, .col4, .col5
+{
+    background-color: #fbfbfb;
+}
+.col6 {
+    text-align:center;
+    vertical-align:central;
+}
+.col6 > form {
+    display:inline-block;
+}
+
+#updateBtn, #deleteBtn {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#updateBtn {
+    background: url('Icons/update.png') no-repeat;
+}
+
+#deleteBtn {
+    background: url('Icons/delete.png') no-repeat;
+}

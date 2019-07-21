@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Update";
+}
+
+<div id="updateBox">
+    <h2>Редактирование</h2>
+    @using (Html.BeginForm("UrlTable", "Home", FormMethod.Post))
+    {
+        <label>Код</label><br />
+        <input id="updateId" type="text" value="@Model.Id" name="Id" readonly /><br />
+        <label>Длинная ссылка</label><br />
+        <input id="updateLong" type="text" value="@Model.LongUrl" name="LongUrl" /><br />
+        <label>Короткая ссылка</label><br />
+        <input id="updateShort" type="text" value="@Model.ShortUrl" name="ShortUrl" /><br />
+        <label>Дата добавления</label><br />
+        <input id="updateDate" type="datetime" value="@Model.DateOfAdd" name="DateOfAdd" /><br />
+        <label>Кол-во переходов</label><br />
+        <input id="updateNum" type="text" value="@Model.NumberOfTransitions" name="NumberOfTransitions" /><br />
+        <input id="updateSub" type="submit" value="Сохранить" />
+    }
+</div>
