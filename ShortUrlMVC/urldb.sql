@@ -55,7 +55,7 @@ CREATE TABLE `listofurls` (
   `DateOfAdd` datetime NOT NULL,
   `NumberOfTransitions` int(11) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `listofurls` (
 
 LOCK TABLES `listofurls` WRITE;
 /*!40000 ALTER TABLE `listofurls` DISABLE KEYS */;
-INSERT INTO `listofurls` VALUES (48,'https://google.com/1','nagQFp','2019-07-20 00:04:18',0),(50,'https://google.com/123','fZZ1p9','2019-07-20 00:04:21',1),(52,'https://google.com/12345','9AHtiI','2019-07-20 00:04:22',0),(54,'https://google.com/1234567','SNGR4X','2019-07-20 00:04:25',0),(56,'https://google.com/1234567234567234567','45OGKq','2019-07-20 00:04:29',0),(60,'https://google.com/1234567234567234567232345674567234567234567','K6HeMA','2019-07-20 00:04:34',0),(62,'https://google.com/1234567234567234567232345674567234567232345674567234567','BwFXKx','2019-07-20 00:04:36',0),(63,'https://google.com/1234567234567234567232345674567234567232345674567234567234567','14E8pa','2019-07-20 00:04:37',0),(70,'https://google.com/1j','hLhMqE','2019-07-20 16:29:47',1),(71,'https://vk.com/','2it9zv','2019-07-20 16:32:40',1),(74,'http://vk.com/','XUrxu3','2019-07-20 16:39:11',4),(76,'https://google.com/1jj1','F0PZTC','2019-07-20 16:58:06',1),(77,'https://metanit.com/sharp/tutorial/3.9.php','3E1C1M','2019-07-20 17:07:09',1),(78,'https://ibank.asb.by/wps/portal/ibank/Home/login/','sks99s','2019-07-21 12:27:53',2),(81,'https://ibank.asb.by/','As79LC','2019-07-21 12:37:54',1),(82,'https://google.com/asdasd','6R5wgn','2019-07-21 12:46:17',8),(84,'onliner.com','8D0GH9','2019-07-21 13:00:14',1),(88,'http://ibank.asb.by/','j6NcGC','2019-07-21 13:11:19',0),(90,'http://www.vk.com/','O9YFIe','2019-07-21 13:19:26',0);
+INSERT INTO `listofurls` VALUES (93,'http://www.vk.com/','oZOux0','2019-07-21 15:02:45',0),(94,'https://ibank.asb.by/','HVdsDC','2019-07-21 15:03:27',2),(96,'https://google.com/','PwysfA','2019-07-21 15:12:16',1);
 /*!40000 ALTER TABLE `listofurls` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -77,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-21 14:20:37
+-- Dump completed on 2019-07-21 15:13:36
